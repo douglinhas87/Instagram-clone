@@ -13,6 +13,7 @@
 
   <div class="navbar-right">
     <button class="logout-btn" (click)="logout()">Sair</button>
+    <button class="dark-mode-toggle" (click)="toggleDarkMode()">🌙 / ☀️</button>
   </div>
 </header>
 
@@ -26,11 +27,11 @@
 <div class="feed">
   <div *ngFor="let post of posts" class="post">
     <div class="post-header">
-      <img class="avatar" src="https://i.pravatar.cc/40" alt="Avatar do usuário" />
+      <img class="avatar" [src]="post.avatar" [alt]="post.user" />
       <span class="username">{{ post.user }}</span>
     </div>
 
-    <img [src]="post.image" class="post-image" alt="Imagem do post" />
+    <img [src]="post.image" class="post-image" [alt]="post.description" />
 
     <div class="post-actions">
       <i
@@ -38,16 +39,14 @@
         [class.liked]="post.liked"
         (click)="toggleLike(post)"
       ></i>
-    
       <i class="fa-regular fa-comment"></i>
       <i class="fa-regular fa-paper-plane"></i>
       <i class="fa-regular fa-bookmark save-icon"></i>
     </div>
 
-    <!-- COMENTÁRIOS -->
     <div class="post-comments">
       <div *ngFor="let comment of post.comments" class="comment">
-        <strong>Comentário:</strong> {{ comment }}
+        <span class="comment-username">{{ comment.username }}:</span> {{ comment.text }}
       </div>
 
       <div class="add-comment">

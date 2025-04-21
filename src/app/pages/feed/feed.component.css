@@ -1,11 +1,8 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #fafafa;
+  background-color: white;
+  color: black;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -77,14 +74,12 @@ body {
   background-color: #ddd;
 }
 
-/* Feed */
 .feed {
   max-width: 600px;
   margin: 30px auto;
   padding: 0 10px;
 }
 
-/* Post */
 .post {
   background-color: white;
   border: 1px solid #ddd;
@@ -155,7 +150,6 @@ body {
   margin-left: auto;
 }
 
-/* Comentários */
 .post-comments {
   padding: 10px;
   border-top: 1px solid #eee;
@@ -190,7 +184,6 @@ body {
   font-weight: bold;
 }
 
-/* Stories */
 .stories-container {
   display: flex;
   overflow-x: auto;
@@ -236,7 +229,41 @@ body {
   text-align: center;
 }
 
-/* Responsividade */
+.dark-mode .navbar {
+  background-color: #333;
+}
+
+.dark-mode .navbar button {
+  background-color: #444;
+  color: white;
+}
+
+.dark-mode .feed .post {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+}
+
+.dark-mode .story img {
+  border: 2px solid #bb86fc;
+}
+
+.dark-mode .comment-username {
+  color: #bb86fc;
+}
+
+.dark-mode .dark-mode-toggle {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dark-mode .dark-mode-toggle:hover {
+  background-color: #555;
+}
+
 @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
