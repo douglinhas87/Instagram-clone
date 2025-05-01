@@ -21,7 +21,7 @@ export class FeedComponent implements OnInit {
     },
     {
       user: 'ea.duque',
-      avatar: 'assets/avatars/SCR.jpg',
+      avatar: 'assets/avatars/duque.jpg',
       image: 'https://pbs.twimg.com/media/GOY0_LKWMAAvCJ8?format=jpg&name=large',
       description: 'Eu e meu pAUrceiro fazendo bagunça',
       liked: false,
@@ -63,6 +63,7 @@ export class FeedComponent implements OnInit {
     { user: 'clarasiqueiraaa_', avatar: 'assets/avatars/clara.jpg' },
     { user: 'douglinhaass_', avatar: 'assets/avatars/douglinhas.jpg' },
     { user: 'leticiarebeka', avatar: 'assets/avatars/leticia.jpg' },
+    { user: 'bmw', avatar: 'assets/avatars/bmw.jpg' },
   ];
 
   private postIndex = 0;
