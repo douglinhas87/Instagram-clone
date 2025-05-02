@@ -8,7 +8,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 16px;
-  border-bottom: 1px solid #dbdbdb;
   background-color: #fff;
   position: sticky;
   top: 0;
@@ -74,7 +73,28 @@ body {
   background-color: #ddd;
 }
 
+/* Ajustes na Barra de Navegação */
+.navbar-left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px; /* Ajuste conforme necessário */
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left .logo {
+  width: 60px;
+  object-fit: contain;
+}
+
+/* Feed */
 .feed {
+  margin-left: 80px; /* Espaço para a barra lateral */
   max-width: 600px;
   margin: 30px auto;
   padding: 0 10px;
@@ -190,17 +210,10 @@ body {
   padding: 16px 10px;
   gap: 12px;
   background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  border-bottom: 1px solid #dbdbdb;
   margin: 20px auto;
-  max-width: 600px;
+  max-width: 640px;
   scrollbar-width: none;
   scroll-behavior: smooth;
-}
-
-.stories-container::-webkit-scrollbar {
-  display: none;
 }
 
 .story {
@@ -208,10 +221,14 @@ body {
   flex-direction: column;
   align-items: center;
   flex-shrink: 0;
-  width: 70px;
+  width: 68px;
   text-align: center;
   font-size: 12px;
   color: #262626;
+}
+
+.stories-container::-webkit-scrollbar {
+  display: none;
 }
 
 .story img {

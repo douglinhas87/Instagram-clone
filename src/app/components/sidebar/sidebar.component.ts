@@ -12,7 +12,6 @@ import { icons, createIcons } from 'lucide';
 export class SidebarComponent implements AfterViewChecked {
 
   ngAfterViewChecked() {
-    // Sempre recria os ícones para evitar ícone oculto
     createIcons({
       icons,
       attrs: {

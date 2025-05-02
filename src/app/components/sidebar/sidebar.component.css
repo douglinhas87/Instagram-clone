@@ -1,15 +1,30 @@
 .sidebar {
   position: fixed;
-  top: 80px; 
+  top: 0;
   left: 0;
-  width: 200px;
-  height: calc(100vh - 80px); 
+  width: 246px;
+  height: 100vh;
   background-color: #fff;
   border-right: 1px solid #dbdbdb;
   display: flex;
   flex-direction: column;
   padding: 20px;
   box-sizing: border-box;
+  z-index: 1000;
+}
+
+.sidebar-logo {
+  width: 110px;
+  height: auto;
+  margin-bottom: 30px;
+  object-fit: contain;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  flex-grow: 1;
 }
 
 .sidebar svg {

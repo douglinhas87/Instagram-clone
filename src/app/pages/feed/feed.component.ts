@@ -75,6 +75,12 @@ export class FeedComponent implements OnInit {
       window.location.href = '/';
     }
 
+    const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+    if (darkModeEnabled) {
+      console.log("Dark mode ativado ao carregar a página!");
+      document.body.classList.add('dark-mode');
+    }
+
     this.loadMorePosts();
   }
 
@@ -91,7 +97,7 @@ export class FeedComponent implements OnInit {
   addComment(post: any, commentInput: HTMLInputElement): void {
     const comment = commentInput.value.trim();
     if (comment) {
-      const newComment = { username: 'douglinhaass_', text: comment };  // Aqui você deve adicionar o nome de usuário do comentarista
+      const newComment = { username: 'douglinhaass_', text: comment };
       post.comments.push(newComment);
       commentInput.value = '';
     }
@@ -116,5 +122,15 @@ export class FeedComponent implements OnInit {
   toggleDarkMode(): void {
     const body = document.body;
     body.classList.toggle('dark-mode');
+
+    if (body.classList.contains('dark-mode')) {
+      console.log("Modo escuro ativado!");
+    } else {
+      console.log("Modo claro ativado!");
+    }
+
+    const darkModeEnabled = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', darkModeEnabled ? 'true' : 'false');
+    console.log("Estado do Dark Mode salvo no localStorage:", darkModeEnabled ? 'true' : 'false');
   }
 }
