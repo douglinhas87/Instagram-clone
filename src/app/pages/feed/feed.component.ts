@@ -14,10 +14,11 @@ export class FeedComponent implements OnInit {
       user: 'douglinhaass_',
       avatar: 'assets/avatars/douglinhas.jpg',
       image: 'https://pbs.twimg.com/media/GfwXpZIWIAA9RcQ?format=jpg&name=large',
-      description: 'Eu amo minha namorada',
+      description: 'Eu amo minha namorada 💖',
       liked: false,
       likes: 172,
-      comments: [{ username: 'douglinhaass_', text: 'Lindo casal ❤️' }]
+      verified: false,
+      comments: [{ username: 'eudinha_18', text: 'Amo vcs ❤️' }]
     },
     {
       user: 'ea.duque',
@@ -26,44 +27,44 @@ export class FeedComponent implements OnInit {
       description: 'Eu e meu pAUrceiro fazendo bagunça',
       liked: false,
       likes: 93,
+      verified: false,
+      comments: [{ username: 'douglinhaass_', text: 'Dois marginais safados' }]
+    },
+    {
+      user: 'bmw',
+      avatar: 'assets/avatars/bmw.jpg',
+      image: 'https://fotos-jornaldocarro-estadao.nyc3.cdn.digitaloceanspaces.com/wp-content/uploads/2021/04/23174828/bmw_m5_competition_251-scaled.jpeg',
+      description: 'Nothing beats this view. And nothing beats the drive.',
+      liked: false,
+      likes: 201,
+      verified: true,
       comments: []
     },
     {
-      user: 'clarasiqueiraaa_',
-      avatar: 'assets/avatars/clara.jpg',
-      image: 'https://pbs.twimg.com/media/GdQG5wlW0AA61Uw?format=jpg&name=large',
-      description: 'Meu solzinho 🌞',
-      liked: false,
-      likes: 201,
-      comments: [
-        { username: 'clarasiqueiraaa_', text: 'Maravilhosa!' },
-        { username: 'leticiarebeka', text: 'Princesa ❤️' }
-      ]
-    },
-    {
-      user: 'leticiarebeka',
-      avatar: 'assets/avatars/leticia.jpg',
-      image: 'https://pbs.twimg.com/media/Fz_YGLAXsAAb9-H?format=jpg&name=large',
-      description: 'Amo o Porto!',
+      user: 'sportrecife',
+      avatar: 'assets/avatars/SCR.jpg',
+      image: 'https://cdn.folhape.com.br/img/pc/1100/1/dn_arquivo/2018/06/dsc-0721.jpg',
+      description: 'Sport, o Brasil é teu!',
       liked: false,
       likes: 302,
+      verified: true,
       comments: [
-        { username: 'leticiarebeka', text: '🇵🇹' },
-        { username: 'douglinhaass_', text: 'Top demais!' }
+        { username: 'leticiarebeka', text: 'Chegando lá na Ilha do Retiro 🎶' },
+        { username: 'douglinhaass_', text: 'SPORT CLUB DO RECIFE' }
       ]
     }
   ];
 
   posts: any[] = [];
   stories = [
-    { user: 'sportrecife', avatar: 'assets/avatars/SCR.jpg' },
-    { user: 'ea.duque', avatar: 'assets/avatars/duque.jpg' },
-    { user: 'luizcarloslzn', avatar: 'assets/avatars/luiz.jpg' },
-    { user: 'elisiafelix', avatar: 'assets/avatars/elisia.jpg' },
-    { user: 'clarasiqueiraaa_', avatar: 'assets/avatars/clara.jpg' },
-    { user: 'douglinhaass_', avatar: 'assets/avatars/douglinhas.jpg' },
-    { user: 'leticiarebeka', avatar: 'assets/avatars/leticia.jpg' },
-    { user: 'bmw', avatar: 'assets/avatars/bmw.jpg' },
+    { user: 'sportrecife', avatar: 'assets/avatars/SCR.jpg', verified: true },
+    { user: 'ea.duque', avatar: 'assets/avatars/duque.jpg', verified: false },
+    { user: 'luizcarloslzn', avatar: 'assets/avatars/luiz.jpg', verified: false },
+    { user: 'elisiafelix', avatar: 'assets/avatars/elisia.jpg', verified: false },
+    { user: 'clarasiqueiraaa_', avatar: 'assets/avatars/clara.jpg', verified: false },
+    { user: 'douglinhaass_', avatar: 'assets/avatars/douglinhas.jpg', verified: false },
+    { user: 'leticiarebeka', avatar: 'assets/avatars/leticia.jpg', verified: false },
+    { user: 'bmw', avatar: 'assets/avatars/bmw.jpg', verified: true }
   ];
 
   private postIndex = 0;

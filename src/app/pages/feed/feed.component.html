@@ -9,7 +9,10 @@
   <article *ngFor="let post of posts" class="post">
     <header class="post-header">
       <img class="avatar" [src]="post.avatar" [alt]="post.user" />
-      <span class="username">{{ post.user }}</span>
+      <span class="username">
+        {{ post.user }}
+        <img *ngIf="post.verified" src="assets/instagram-verified-badge.png" alt="Verificado" class="verified-badge" />
+      </span>
     </header>
 
     <img [src]="post.image" class="post-image" [alt]="post.description" />
@@ -23,6 +26,15 @@
       <i class="fa-regular fa-comment"></i>
       <i class="fa-regular fa-paper-plane"></i>
       <i class="fa-regular fa-bookmark save-icon"></i>
+    </section>
+
+    <!-- Descrição estilo Insta real -->
+    <section class="post-description">
+      <span class="username">
+        {{ post.user }}
+        <img *ngIf="post.verified" src="assets/instagram-verified-badge.png" alt="Verificado" class="verified-badge" />
+      </span>
+      {{ post.description }}
     </section>
 
     <section class="post-comments">

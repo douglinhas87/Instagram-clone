@@ -73,12 +73,11 @@ body {
   background-color: #ddd;
 }
 
-/* Ajustes na Barra de Navegação */
 .navbar-left {
   position: fixed;
   top: 0;
   left: 0;
-  width: 80px; /* Ajuste conforme necessário */
+  width: 80px; 
   height: 100%;
   background-color: #fff;
   display: flex;
@@ -92,19 +91,23 @@ body {
   object-fit: contain;
 }
 
-/* Feed */
 .feed {
-  margin-left: 80px; /* Espaço para a barra lateral */
-  max-width: 600px;
+  max-width: 462px;
   margin: 30px auto;
   padding: 0 10px;
 }
 
 .post {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #dbdbdb;
+  padding-bottom: 16px;
+}
+
+.verified-badge {
+  width: 13px;
+  height: 13px;
+  margin-left: 1px;
+  vertical-align: middle;
 }
 
 .post-header {
@@ -131,8 +134,16 @@ body {
 }
 
 .post-description {
-  padding: 10px;
   font-size: 14px;
+  padding: 0 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.post-description .username {
+  font-weight: 600;
+  margin-right: 6px;
 }
 
 .post-actions {
@@ -171,8 +182,7 @@ body {
 }
 
 .post-comments {
-  padding: 10px;
-  border-top: 1px solid #eee;
+  padding: 0;
 }
 
 .comment {
@@ -188,11 +198,14 @@ body {
 .add-comment input {
   flex: 1;
   padding: 6px;
-  border: 1px solid #ccc;
+  border: none;
+  outline: none;
   border-radius: 6px;
   font-size: 14px;
   margin-right: 6px;
+  background-color: white;
 }
+
 
 .add-comment button {
   background-color: #0095f6;
@@ -308,3 +321,5 @@ body {
     font-size: 12px;
   }
 }
+
+
