@@ -1,6 +1,6 @@
 # 📸 Clone do Instagram com Angular
 
-![Print do status do Git](assets/Captura%20de%20tela%202025-05-08%20021207.png)
+![Captura de tela do projeto](assets/Captura%20de%20tela%202025-05-08%20021207.png)
 
 ![Captura de tela do projeto](src/assets/Screenshots/Captura%20de%20tela%202025-05-04%20154404.png)
 
