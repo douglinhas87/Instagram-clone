@@ -206,7 +206,6 @@ body {
   background-color: white;
 }
 
-
 .add-comment button {
   background-color: #0095f6;
   color: white;
@@ -223,13 +222,15 @@ body {
   padding: 16px 10px;
   gap: 12px;
   background-color: white;
-  margin: 20px auto;
+  margin: 0 auto;
   max-width: 640px;
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
 
 .story {
+  margin-top: 0;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,8 +246,8 @@ body {
 }
 
 .story img {
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   border: 2px solid #e91e63;
   object-fit: cover;
@@ -321,5 +322,4 @@ body {
     font-size: 12px;
   }
 }
-
 

@@ -20,7 +20,7 @@
 
 .profile-info {
   flex-grow: 1;
-  margin-right: 16px; /* Distância entre o nome de usuário e o botão */
+  margin-right: 16px;
 }
 
 .profile-info h2 {

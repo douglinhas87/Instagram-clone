@@ -1,4 +1,13 @@
-<app-sidebar></app-sidebar>
-<div class="main-content">
-  <router-outlet></router-outlet>
+<div class="main-layout">
+  <app-sidebar></app-sidebar>
+
+  <div class="content-layout">
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+
+    <aside class="suggestions">
+      <app-suggestions></app-suggestions>
+    </aside>
+  </div>
 </div>

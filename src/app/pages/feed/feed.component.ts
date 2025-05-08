@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.css']
 })
+
 export class FeedComponent implements OnInit {
   allPosts = [
     {
@@ -52,7 +53,18 @@ export class FeedComponent implements OnInit {
         { username: 'leticiarebeka', text: 'Chegando lá na Ilha do Retiro 🎶' },
         { username: 'douglinhaass_', text: 'SPORT CLUB DO RECIFE' }
       ]
+    },
+    {
+      user: 'apple',
+      avatar: 'assets/avatars/apple.jpg',
+      image: 'https://t2.tudocdn.net/726532?w=1920&h=1440',
+      description: 'iPhone 16 Pro e iPhone 16 Pro Max 📱', 
+      liked: false,
+      likes: 302,
+      verified: true,
+      comments: []
     }
+
   ];
 
   posts: any[] = [];
@@ -61,9 +73,9 @@ export class FeedComponent implements OnInit {
     { user: 'ea.duque', avatar: 'assets/avatars/duque.jpg', verified: false },
     { user: 'luizcarloslzn', avatar: 'assets/avatars/luiz.jpg', verified: false },
     { user: 'elisiafelix', avatar: 'assets/avatars/elisia.jpg', verified: false },
-    { user: 'clarasiqueiraaa_', avatar: 'assets/avatars/clara.jpg', verified: false },
-    { user: 'douglinhaass_', avatar: 'assets/avatars/douglinhas.jpg', verified: false },
-    { user: 'leticiarebeka', avatar: 'assets/avatars/leticia.jpg', verified: false },
+    { user: 'clarasiq...', avatar: 'assets/avatars/clara.jpg', verified: false },
+    { user: 'douglinha...', avatar: 'assets/avatars/douglinhas.jpg', verified: false },
+    { user: 'apple', avatar: 'assets/avatars/apple.jpg', verified: true },
     { user: 'bmw', avatar: 'assets/avatars/bmw.jpg', verified: true }
   ];
 

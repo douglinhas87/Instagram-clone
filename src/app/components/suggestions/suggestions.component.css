@@ -1,0 +1,114 @@
+.suggestions-container {
+  width: 100%;
+  max-width: 350px;
+  padding: 16px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  margin-top: -10px;
+  margin-left: 25px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.profile-pic {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+}
+
+.text-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 12px;
+}
+
+.profile .username,
+.suggestion-item .username {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+}
+
+.profile .name,
+.suggestion-item .name {
+  color: #8e8e8e;
+  font-size: 12px;
+  margin: 2px 0 0 0;
+}
+
+.profile button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.suggestions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+
+.suggestions-header .section-header {
+  color: #8e8e8e;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.suggestions-header .see-all-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.suggestion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.suggestion-item .profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.suggestion-item .profile-info img {
+  width: 43px;
+  height: 43px;
+  border-radius: 50%;
+}
+
+.suggestion-item button {
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #c7c7c7;
+  line-height: 1.5;
+}
+
+.footer .copyright {
+  margin-top: 12px;
+}

@@ -8,8 +8,125 @@ app-sidebar {
   flex-shrink: 0;
 }
 
+.content-layout {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+}
+
 .content {
   flex: 1;
-  margin-left: -40px;
+  margin-left: 25px;
   max-width: 700px;
+}
+
+.feed-layout {
+  display: flex;
+  justify-content: flex-start;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 16px;
+}
+
+.feed {
+  flex: 0 0 470px;
+}
+
+.content {
+  flex: 0 0 600px;
+}
+
+.suggestions {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
+}
+
+.suggestions-container {
+  padding: 0 16px;
+}
+
+.suggestions-container > div:first-child img {
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+}
+
+.suggestions-container .suggestion-item img {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+}
+
+.suggestions-container p {
+  margin: 0;
+}
+
+.suggestions-container .username {
+  font-weight: 600;
+  font-size: 14px;
+  color: #262626;
+}
+
+.suggestions-container .description {
+  font-size: 12px;
+  color: #8e8e8e;
+  max-width: 150px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.suggestions-container .switch-btn,
+.suggestions-container .see-all-btn,
+.suggestions-container .follow-btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0095f6;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.suggestions-container .section-header {
+  font-size: 14px;
+  color: #8e8e8e;
+  font-weight: 600;
+}
+
+.suggestions-container .suggestion-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.suggestions-container .profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.suggestions-container .profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.suggestions-container .profile-text {
+  margin-left: 12px;
+}
+
+.suggestions-container .profile-text p {
+  margin: 0;
+}
+
+.suggestions-container .profile-text .realname {
+  font-size: 12px;
+  color: #8e8e8e;
 }
