@@ -69,16 +69,16 @@ export class FeedComponent implements OnInit {
 
   posts: any[] = [];
   stories = [
-    { user: 'sportrecife', avatar: 'assets/avatars/SCR.jpg', verified: true },
-    { user: 'ea.duque', avatar: 'assets/avatars/duque.jpg', verified: false },
-    { user: 'luizcarloslzn', avatar: 'assets/avatars/luiz.jpg', verified: false },
-    { user: 'elisiafelix', avatar: 'assets/avatars/elisia.jpg', verified: false },
-    { user: 'clarasiq...', avatar: 'assets/avatars/clara.jpg', verified: false },
-    { user: 'douglinha...', avatar: 'assets/avatars/douglinhas.jpg', verified: false },
-    { user: 'apple', avatar: 'assets/avatars/apple.jpg', verified: true },
-    { user: 'bmw', avatar: 'assets/avatars/bmw.jpg', verified: true }
+    { user: 'sportrecife', avatar: 'assets/avatars/SCR.jpg', verified: true, closeFriends: false },
+    { user: 'ea.duque', avatar: 'assets/avatars/duque.jpg', verified: false, closeFriends: false },
+    { user: 'luizcarloslzn', avatar: 'assets/avatars/luiz.jpg', verified: false, closeFriends: false },
+    { user: 'elisiafelix', avatar: 'assets/avatars/elisia.jpg', verified: false, closeFriends: false },
+    { user: 'clarasiq...', avatar: 'assets/avatars/clara.jpg', verified: false, closeFriends: false },
+    { user: 'douglinha...', avatar: 'assets/avatars/douglinhas.jpg', verified: false, closeFriends: true },
+    { user: 'apple', avatar: 'assets/avatars/apple.jpg', verified: true, closeFriends: false },
+    { user: 'bmw', avatar: 'assets/avatars/bmw.jpg', verified: true, closeFriends: false }
   ];
-
+  
   private postIndex = 0;
   private postsPerLoad = 2;
 

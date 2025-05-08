@@ -5,7 +5,7 @@
       <p class="username">leticiarebeka_</p>
       <p class="name">Leticia Rebeka</p>
     </div>
-    <button>Mudar</button>
+    <button class="see-all-btn">Mudar</button>
   </div>
 
   <div class="suggestions-header">
@@ -13,6 +13,7 @@
     <button class="see-all-btn">Ver tudo</button>
   </div>
 
+  <!-- Lista de sugestões -->
   <div *ngFor="let suggestion of suggestions" class="suggestion-item">
     <div class="profile-info">
       <img [src]="suggestion.profileImage" class="profile-pic mr-3" />
@@ -21,7 +22,13 @@
         <p class="name">{{ suggestion.name }}</p>
       </div>
     </div>
-    <button>Seguir</button>
+
+    <!-- Botão com toggle -->
+    <button 
+      [ngClass]="{'following': suggestion.isFollowing}" 
+      (click)="toggleFollow(suggestion)">
+      {{ suggestion.isFollowing ? 'Seguindo' : 'Seguir' }}
+    </button>
   </div>
 
   <div class="footer">

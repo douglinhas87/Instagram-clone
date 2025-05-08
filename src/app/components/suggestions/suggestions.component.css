@@ -112,3 +112,23 @@
 .footer .copyright {
   margin-top: 12px;
 }
+
+.suggestion-item button:hover {
+  color: #00376b;
+}
+
+.suggestion-item button.following {
+  color: #262626;
+}
+
+.suggestion-item button.following:hover {
+  color: #737373;
+}
+
+.suggestions-header .see-all-btn:hover {
+  color: #737373;
+}
+
+.profile button:hover {
+  color: #00376b;
+}

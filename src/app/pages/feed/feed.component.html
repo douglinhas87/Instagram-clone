@@ -1,5 +1,9 @@
 <section class="stories-container">
-  <div *ngFor="let story of stories" class="story">
+  <div 
+    *ngFor="let story of stories" 
+    class="story" 
+    [ngClass]="{'close-friends': story.closeFriends}">
+    
     <img [src]="story.avatar" [alt]="story.user" />
     <span>{{ story.user }}</span>
   </div>
