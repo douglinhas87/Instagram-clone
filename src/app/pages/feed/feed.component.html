@@ -2,7 +2,8 @@
   <div 
     *ngFor="let story of stories" 
     class="story" 
-    [ngClass]="{'close-friends': story.closeFriends}">
+    [ngClass]="{'close-friends': story.closeFriends}"
+    [routerLink]="['/profile', story.user]">
     
     <img [src]="story.avatar" [alt]="story.user" />
     <span>{{ story.user }}</span>
@@ -10,17 +11,21 @@
 </section>
 
 <div class="feed-layout">
-<main class="feed">
+  <main class="feed">
     <article *ngFor="let post of posts" class="post">
+    
       <header class="post-header">
-        <img class="avatar" [src]="post.avatar" [alt]="post.user" />
-        <span class="username">
-          {{ post.user }}
-          <img *ngIf="post.verified" src="assets/instagram-verified-badge.png" alt="Verificado" class="verified-badge" />
-        </span>
+        <div class="post-user">
+          <img class="avatar" [src]="post.avatar" [alt]="post.user" />
+          <a [routerLink]="['/profile', post.user]" class="username">
+            {{ post.user }}
+            <img *ngIf="post.verified" src="assets/instagram-verified-badge.png" alt="Verificado" class="verified-badge" />
+          </a>
+        </div>
+        <i class="fa fa-ellipsis-h"></i>
       </header>
 
-      <img [src]="post.image" class="post-image" [alt]="post.description" />
+      <img class="post-image" [src]="post.image" [alt]="post.description" />
 
       <section class="post-actions">
         <i
@@ -34,22 +39,28 @@
       </section>
 
       <section class="post-description">
-        <span class="username">
+        <a [routerLink]="['/profile', post.user]" class="username">
           {{ post.user }}
           <img *ngIf="post.verified" src="assets/instagram-verified-badge.png" alt="Verificado" class="verified-badge" />
-        </span>
+        </a>
         {{ post.description }}
       </section>
 
       <section class="post-comments">
         <div *ngFor="let comment of post.comments" class="comment">
-          <span class="comment-username">{{ comment.username }}:</span> {{ comment.text }}
+          <a [routerLink]="['/profile', comment.username]" class="username">{{ comment.username }}</a>: {{ comment.text }}
         </div>
 
         <div class="add-comment">
-          <input #commentInput type="text" placeholder="Adicionar um comentário..." />
-          <button (click)="addComment(post, commentInput)">Postar</button>
+          <input 
+            #commentInput 
+            type="text" 
+            placeholder="Adicionar um comentário..." 
+            (keydown)="onCommentKeyDown($event, post, commentInput)"
+          />
         </div>
       </section>
+
     </article>
   </main>
+</div>

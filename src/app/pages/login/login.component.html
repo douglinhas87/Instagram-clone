@@ -1,31 +1,78 @@
-<div class="login-container">
-  <div class="login-box">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
-      alt="Instagram Logo"
-      class="logo"
-    />
-
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-      <input
-        type="text"
-        placeholder="Telefone, nome de usuário ou email"
-        formControlName="username"
-      />
-      <input
-        type="password"
-        placeholder="Senha"
-        formControlName="password"
-      />
-      <button type="submit" [disabled]="loginForm.invalid">Entrar</button>
-    </form>
-
-    <div class="divider">
-      <span></span>
-      <p>OU</p>
-      <span></span>
+<div class="insta-wrapper">
+  <div class="insta-container">
+    <div class="image-side">
+      <img src="assets/instagram-web-lox-image.png" alt="Instagram App Preview" />
     </div>
 
-    <p class="forgot-password">Esqueceu a senha?</p>
+    <div class="form-side">
+      <div class="login-box">
+        <img
+          src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"
+          alt="Instagram"
+          class="logo"
+        />
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <input
+            type="text"
+            formControlName="username"
+            placeholder="Telefone, nome de usuário ou email"
+          />
+          <input
+            type="password"
+            formControlName="password"
+            placeholder="Senha"
+          />
+          <button type="submit">Entrar</button>
+        </form>
+
+        <div class="divider">
+          <div></div>
+          <span>OU</span>
+          <div></div>
+        </div>
+
+        <a class="fb-login" href="#">
+          <img
+            src="/assets/icons/Facebook_f_logo_(2021).svg.png"
+            alt="Facebook"
+          />
+          Entrar com o Facebook
+        </a>
+
+        <a class="forgot" href="#">Esqueceu a senha?</a>
+
+        <p class="report-info">
+          Você também pode <a href="#" class="report-link">denunciar conteúdo que acredita ser ilícito</a> no seu país sem entrar.
+        </p>
+      </div>
+
+      <div class="signup-box">
+        <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+      </div>
+    </div>
   </div>
 </div>
+
+<footer class="footer">
+  <ul>
+    <li><a href="#">Meta</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">Carreiras</a></li>
+    <li><a href="#">Ajuda</a></li>
+    <li><a href="#">API</a></li>
+    <li><a href="#">Privacidade</a></li>
+    <li><a href="#">Termos</a></li>
+    <li><a href="#">Localizações</a></li>
+    <li><a href="#">Instagram Lite</a></li>
+    <li><a href="#">Threads</a></li>
+    <li><a href="#">Upload de contatos e não usuários</a></li>
+    <li><a href="#">Meta Verified</a></li>
+  </ul>
+
+  <div class="footer-bottom">
+    <span>Português (Brasil)</span>
+    <span>© 2025 Clone Instagram from Douglinhas</span>
+  </div>
+</footer>

@@ -1,8 +1,15 @@
 # 📸 Clone do Instagram com Angular
 
-![Captura de tela do projetog](src/assets/Screenshots/Captura%20de%20tela%202025-05-08%20152151.png)
+## Página de login
+![Captura de tela do projeto](src/assets/Screenshots/Captura%20de%20tela%202025-05-12%20220433.png)
 
-![Captura de tela do projeto](src/assets/Screenshots/Captura%20de%20tela%202025-05-04%20154404.png)
+
+## Feed
+![Captura de tela do projeto](src/assets/Screenshots/Captura%20de%20tela%202025-05-08%20152151.png)
+
+
+## Post com selo de verificado no user ✅
+![Captura de tela do projeto](src/assets/Screenshots/Captura%20de%20tela%202025-05-12%20221022.png)
 
 Projeto Front-End desenvolvido com Angular 17, inspirado na interface do Instagram, com funcionalidades básicas de feed, perfil e navegação.
 
@@ -11,9 +18,8 @@ Projeto Front-End desenvolvido com Angular 17, inspirado na interface do Instagr
 ## 🚀 Funcionalidades
 
 - Feed com posts (imagem, curtidas, avatar)
-- Página de perfil do usuário
+- Página de perfil do usuário (em construção 🛠️)
 - Barra lateral com navegação e ícones reais do Instagram
-- Layout responsivo (em construção 🛠️)
 - Estrutura com Angular Standalone Components
 
 ---

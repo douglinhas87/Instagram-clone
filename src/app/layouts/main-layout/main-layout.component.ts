@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../../components/sidebar/sidebar.component';
 import { SuggestionsComponent } from '../../components/suggestions/suggestions.component';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-layout',
@@ -11,5 +11,13 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './main-layout.component.html',
   styleUrls: ['./main-layout.component.css']
 })
-export class MainLayoutComponent { }
+export class MainLayoutComponent implements OnInit {
+  isProfilePage: boolean = false;
 
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    this.router.events.subscribe(() => {
+    });
+  }
+}

@@ -1,22 +1,30 @@
 <div class="profile-container">
   <div class="profile-header">
-    <img [src]="posts[0].avatar" alt="Avatar" class="avatar" />
+    <img class="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
+    
     <div class="profile-info">
-      <h2>{{ username }}</h2>
-      <p>{{ posts.length }} posts</p>
+      <div class="top-row">
+        <h2 class="username">{{ username }}</h2>
+        <button class="edit-button">Seguir</button>
+      </div>
+      <div class="stats-row">
+        <span><strong>12</strong> publicações</span>
+        <span><strong>340</strong> seguidores</span>
+        <span><strong>180</strong> seguindo</span>
+      </div>
+      <div class="bio-row">
+        <strong>Douglas Ferraz</strong>
+        <p>Dev e estudante na UFRPE 🚀</p>
+      </div>
     </div>
-    <button (click)="toggleFollow()" class="follow-btn">
-      {{ isFollowing ? 'Seguindo' : 'Seguir' }}
-    </button>
   </div>
 
-  <div class="post-grid">
-    <div *ngFor="let post of posts" class="post-item">
-      <img [src]="post.image" alt="Post" />
-    </div>
-  </div>
-
-  <div *ngIf="posts.length === 0" class="no-posts">
-    <p>Esse usuário ainda não postou nada 🤷‍♂️</p>
+  <div class="posts-grid">
+    <img src="https://via.placeholder.com/300" alt="Post 1">
+    <img src="https://via.placeholder.com/300" alt="Post 2">
+    <img src="https://via.placeholder.com/300" alt="Post 3">
+    <img src="https://via.placeholder.com/300" alt="Post 4">
+    <img src="https://via.placeholder.com/300" alt="Post 5">
+    <img src="https://via.placeholder.com/300" alt="Post 6">
   </div>
 </div>

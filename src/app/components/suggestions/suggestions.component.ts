@@ -37,13 +37,12 @@ export class SuggestionsComponent {
     },
     {
       username: 'therollingstones',
-      name: 'Seguido(a) por douglinhaass_ e outr...',
+      name: 'Seguido(a) por douglinhaass_ e...',
       profileImage: 'assets/suggestions/therollingstones.jpg',
       isFollowing: false
     }
   ];
 
-  // Método correto pra alternar seguir/seguindo
   toggleFollow(user: any) {
     user.isFollowing = !user.isFollowing;
     console.log(user.isFollowing ? `Seguindo ${user.username}` : `Deixou de seguir ${user.username}`);

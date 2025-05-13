@@ -2,6 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+interface Post {
+  user: string;
+  avatar: string;
+  image: string;
+  description: string;
+  liked: boolean;
+  likes: number;
+  comments: { username: string; text: string }[];
+}
+
 @Component({
   selector: 'app-profile',
   standalone: true,
@@ -11,10 +21,10 @@ import { CommonModule } from '@angular/common';
 })
 export class ProfileComponent implements OnInit {
   username: string = '';
-  posts: any[] = [];  
-  isFollowing: boolean = false;  
+  posts: Post[] = [];
+  isFollowing: boolean = false;
 
-  allPosts = [
+  allPosts: Post[] = [
     {
       user: 'douglinhaass_',
       avatar: 'assets/avatars/douglinhas.jpg',
@@ -22,7 +32,7 @@ export class ProfileComponent implements OnInit {
       description: 'Eu amo minha namorada',
       liked: false,
       likes: 172,
-      comments: [{ username: 'douglinhaass_', text: 'Lindo casal ❤️' }]
+      comments: [{ username: 'douglinhaass_', text: 'Lindo casal ❤' }]
     },
     {
       user: 'ea.duque',
@@ -42,7 +52,7 @@ export class ProfileComponent implements OnInit {
       likes: 201,
       comments: [
         { username: 'clarasiqueiraaa_', text: 'Maravilhosa!' },
-        { username: 'leticiarebeka', text: 'Princesa ❤️' }
+        { username: 'leticiarebeka', text: 'Princesa ❤' }
       ]
     }
   ];
@@ -54,12 +64,14 @@ export class ProfileComponent implements OnInit {
       const param = params.get('username');
       if (param) {
         this.username = param;
-        this.posts = this.allPosts.filter(post => post.user === this.username);
+        this.posts = this.allPosts.filter(
+          post => post.user.toLowerCase() === this.username.toLowerCase()
+        );
       }
     });
   }
 
   toggleFollow(): void {
-    this.isFollowing = !this.isFollowing; 
-  }
+    this.isFollowing = !this.isFollowing;
+  }
 }

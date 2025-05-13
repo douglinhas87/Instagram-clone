@@ -1,10 +1,11 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-feed',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './feed.component.html',
   styleUrls: ['./feed.component.css']
 })
@@ -64,7 +65,6 @@ export class FeedComponent implements OnInit {
       verified: true,
       comments: []
     }
-
   ];
 
   posts: any[] = [];
@@ -107,12 +107,13 @@ export class FeedComponent implements OnInit {
     post.likes += post.liked ? 1 : -1;
   }
 
-  addComment(post: any, commentInput: HTMLInputElement): void {
-    const comment = commentInput.value.trim();
-    if (comment) {
-      const newComment = { username: 'douglinhaass_', text: comment };
+  onCommentKeyDown(event: KeyboardEvent, post: any, input: HTMLInputElement): void {
+    const commentText = input.value.trim();
+
+    if (event.key === 'Enter' && commentText) {
+      const newComment = { username: 'douglinhaass_', text: commentText };
       post.comments.push(newComment);
-      commentInput.value = '';
+      input.value = '';
     }
   }
 

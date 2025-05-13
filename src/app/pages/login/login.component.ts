@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,20 +13,33 @@ import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
 export class LoginComponent {
   loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
     this.loginForm = this.fb.group({
-      username: [''],
-      password: ['']
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required]]
     });
   }
 
   onSubmit() {
+    if (this.loginForm.invalid) {
+      return;
+    }
+
     const { username, password } = this.loginForm.value;
+    
     if (username === 'leticiarebeka_' && password === '23012024') {
       localStorage.setItem('auth', 'true');
-      window.location.href = '/feed';
+      this.router.navigate(['/feed']);
     } else {
       alert('Você não é minha namorada! 💔');
     }
+  }
+
+  get username() {
+    return this.loginForm.get('username');
+  }
+
+  get password() {
+    return this.loginForm.get('password');
   }
 }

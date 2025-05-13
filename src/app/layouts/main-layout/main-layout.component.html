@@ -6,7 +6,7 @@
       <router-outlet></router-outlet>
     </div>
 
-    <aside class="suggestions">
+    <aside class="suggestions" *ngIf="!isProfilePage">
       <app-suggestions></app-suggestions>
     </aside>
   </div>
